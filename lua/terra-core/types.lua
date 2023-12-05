@@ -1,3 +1,4 @@
+---@diagnostic disable: duplicate-doc-field
 ---@class TerraHighlightDefinition
 ---@field fg?                                     string
 ---@field bg?                                     string
@@ -82,6 +83,56 @@
 ---@class TerraColors.Semantics
 ---@field bg                                      TerraColors.Semantics.Background
 ---@field fg                                      TerraColors.Semantics.Foreground
+
+---These colors are used for syntax highlighting. They are based on the treesitter highlight groups.
+---The values to be used here should be from the `TerraColors.Palette` table.
+---Based on the list here: [Treesitter - Neovim docs](https://neovim.io/doc/user/treesitter.html#treesitter-highlight)
+---@class TerraColors.Syntax
+---@field boolean                                 string In Lua: `true`, `false`
+---@field character                               string In TypeScript: `'a'` in `const char = 'a';`
+---@field character_special                       string In TypeScript: Special characters
+---@field comment                                 string In Lua: `-- This is a comment`
+---@field conditional                             string In Lua: `if`, `elseif`, `else`, `then`, `end`
+---@field constant                                string In Lua: `math.pi`
+---@field constant_builtin                        string In Lua: `nil`, `true`, `false`
+---@field constant_macro                          string In TypeScript: `MY_CONST` in `const MY_CONST = 42;`
+---@field constructor                             string In TypeScript: `Foo` in `new Foo()`
+---@field debug                                   string In TypeScript: Debug
+---@field define                                  string In Lua: `function` keyword in Lua
+---@field exception                               string In TypeScript: `try`, `catch`, `throw`
+---@field field                                   string In Lua: `x` in `t = { x = 42 }`
+---@field float                                   string In Lua: `3.14`
+---@field function                                string In Lua: `print`, `math.sin`
+---@field function_builtin                        string In Lua: `print`, `tostring`
+---@field function_macro                          string In TypeScript: Not applicable
+---@field include                                 string In TypeScript: `import`
+---@field keyword                                 string In Lua: `function`, `local`, `return`
+---@field label                                   string In Lua: `::label::`
+---@field macro                                   string In TypeScript: `MY_MACRO` in `#define MY_MACRO()`
+---@field method                                  string In TypeScript: `toUpperCase` in `str.toUpperCase()`
+---@field namespace                               string In TypeScript: `namespace`
+---@field number                                  string In Lua: `42`, `3.14`
+---@field operator                                string In Lua: `+`, `-`, `*`, `/`, `==`, `~=`
+---@field parameter                               string In Lua: `x` in `function foo(x)`
+---@field preproc                                 string In C: `#include`, `#define`
+---@field property                                string In TypeScript: `length` in `str.length`
+---@field punctuation                             string In Lua: `(`, `)`, `{`, `}`, `,`, `;`, etc.
+---@field repeat                                  string In Lua: `for`, `while`, `repeat`, `until`
+---@field storageclass                            string In TypeScript: `const`, `let`, `var`
+---@field string                                  string In Lua: `"Hello, World!"`
+---@field string_escape                           string In Lua: `\\n` in `Hello\\nWorld`
+---@field string_special                          string In Lua: Special characters in strings
+---@field structure                               string In TypeScript: `class`, `interface`
+---@field text_literal                            string In Lua: `"Hello, World!"`
+---@field text_reference                          string In Lua: `x` in `local x = 10`
+---@field text_title                              string In Lua: Function or class names
+---@field text_todo                               string In Lua: TODO comments
+---@field text_underline                          string In Lua: Underlined text
+---@field text_uri                                string In Lua: `https://example.com`
+---@field type                                    string In TypeScript: `string`, `number`, `boolean`
+---@field type_definition                         string In TypeScript: `interface`, `type`
+---@field variable                                string In Lua: `x` in `local x = 10`
+
 
 ---@class TerraColors
 ---@field none                                    string

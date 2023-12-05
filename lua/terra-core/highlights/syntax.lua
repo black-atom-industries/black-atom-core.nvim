@@ -2,6 +2,11 @@ local utils = require("terra-core.utils")
 
 local extend_hl = utils.highlights.extend_hl_with_code_style
 
+-- NOTE: `:h treesitter-highlight-groups`
+-- TODO: Link Treesitter Highlights with Native Highlights
+-- TODO: Create Types from used highlight groups
+-- TODO: Define colors for each variant
+
 ---@type TerraHighlightsSpec
 local highlight_map_extension = {
     map = function(colors, config)
@@ -56,8 +61,6 @@ local highlight_map_extension = {
 
             -- Treesitter Highlights
             -- If you want to add TreeSitter highlights, you can do so here.
-            ["@annotation"] = { fg = fg.primary.main },
-
             ["@attribute"] = { fg = palette.cyan },
 
             ["@boolean"] = { fg = palette.dark_yellow },
