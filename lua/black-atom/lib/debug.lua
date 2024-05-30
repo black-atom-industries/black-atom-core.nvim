@@ -22,9 +22,11 @@ M.count_keys = function(tbl)
 end
 
 ---Write debug file for highlights
----@param modules string[] -@param highlights_map BlackAtom.HighlightsMap
+---@param colors BlackAtom.ThemeColors
+---@param modules string[]
+---@param highlights_map table<string, BlackAtom.HighlightDefinition>
 ---@return nil
-M.write_debug_highlights_file = function(modules, highlights_map)
+M.write_debug_highlights_file = function(colors, modules, highlights_map)
     local filepath = lib_files.build_path(M.pathes.debug_dir, M.pathes.highlights_map_debug_filename)
 
     M.create_debug_dir()
@@ -52,6 +54,20 @@ M.write_debug_highlights_file = function(modules, highlights_map)
         for _, module in ipairs(modules) do
             file:write(module .. "\n")
         end
+        file:write("\n")
+        file:write(separator .. "\n")
+
+        -- Theme colors definition
+        file:write("\n")
+        file:write("Theme colors definition:" .. "\n")
+        file:write("\n")
+        file:write("Primary colors:" .. "\n")
+        file:write("\n")
+        file:write(vim.inspect(colors.palette) .. "\n")
+        file:write("\n")
+        file:write("Semantic colors:" .. "\n")
+        file:write("\n")
+        file:write(vim.inspect(colors.semantics) .. "\n")
         file:write("\n")
         file:write(separator .. "\n")
 
