@@ -5,7 +5,7 @@ local M = {}
 local function load_theme_definition(theme)
     local config = require("black-atom.config").get()
     theme = theme or config.theme
-    return require("black-atom.themes" .. theme)
+    return require("black-atom.themes." .. theme)
 end
 
 ---Returns the currently set theme meta.

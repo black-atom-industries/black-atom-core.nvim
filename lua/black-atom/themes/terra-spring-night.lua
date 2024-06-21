@@ -64,8 +64,8 @@ M.semantics = {
         },
         active = M.primaries[4],
         match = {
-            active = lib.color.darken(M.palette.magenta, 0.25, M.primaries[1]),
-            passive = lib.color.darken(M.palette.magenta, 0.15, M.primaries[1]),
+            active = lib.color.darken(M.palette.magenta, 0.15, M.primaries[1]),
+            passive = lib.color.darken(M.palette.magenta, 0.05, M.primaries[1]),
         },
         diff = {
             add = M.palette.green,
