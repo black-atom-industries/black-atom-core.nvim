@@ -5,10 +5,10 @@ local M = {}
 ---@type BlackAtom.Colors.Primaries
 M.primaries = {
     -- Lows
-    "#0e0f10",
-    "#17181a",
-    "#1d1e20",
-    "#212225",
+    "#131415",
+    "#1c1d1f",
+    "#222325",
+    "#2b2c30",
 
     -- Mids
     "#3a3d47",
